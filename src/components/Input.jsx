@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
 	input: {
 		height: 48,
 		width: '100%',
+		fontFamily: 'Inter',
 		fontSize: 14,
 		paddingHorizontal: 40,
 		borderWidth: 1,
