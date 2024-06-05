@@ -6,7 +6,7 @@ import Button from '../components/Button';
 const Login = ({ navigation, route: { name } }) => {
 	const isLogin = name?.toLowerCase() === 'login';
 
-	const navigateTo = () => navigation?.navigate('Home');
+	const navigateTo = () => navigation?.navigate('PrivateScreens');
 
 	return (
 		<AuthLayout>
