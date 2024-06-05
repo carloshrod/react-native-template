@@ -1,8 +1,11 @@
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
-import FormAuth from '../components/FormAuth';
 import AuthLayout from '../components/AuthLayout';
+import FormAuth from '../components/FormAuth';
+import Button from '../components/Button';
 
 const Signup = ({ navigation }) => {
+	const navigateTo = () => navigation?.navigate('Login');
+
 	return (
 		<AuthLayout>
 			<TouchableOpacity
@@ -12,7 +15,9 @@ const Signup = ({ navigation }) => {
 			>
 				<Image source={require('../../assets/images/arrow-left.png')} />
 			</TouchableOpacity>
-			<FormAuth />
+			<FormAuth>
+				<Button label='Registrarse' navigateTo={navigateTo} />
+			</FormAuth>
 		</AuthLayout>
 	);
 };
@@ -20,8 +25,8 @@ const Signup = ({ navigation }) => {
 const styles = StyleSheet.create({
 	back: {
 		position: 'absolute',
-		top: 24,
-		left: 0,
+		top: 20,
+		left: 20,
 	},
 });
 

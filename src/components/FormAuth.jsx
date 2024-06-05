@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet } from 'react-native';
-import Button from './Button';
 import Input from './Input';
 import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../utils/consts';
 
@@ -8,7 +7,6 @@ const FormAuth = ({ isLogin = false, children }) => {
 	const title = isLogin
 		? 'INICIA SESIÓN CON TU CUENTA'
 		: 'CREAR UNA NUEVA CUENTA';
-	const btnLabel = isLogin ? 'Iniciar Sesión' : 'Registrarse';
 
 	return (
 		<View style={styles.form}>
@@ -16,7 +14,6 @@ const FormAuth = ({ isLogin = false, children }) => {
 			{inputFields.map((input, index) => (
 				<Input key={index} label={input.label} icon={input.icon} />
 			))}
-			<Button label={btnLabel} />
 			{children}
 		</View>
 	);
@@ -25,6 +22,7 @@ const FormAuth = ({ isLogin = false, children }) => {
 const styles = StyleSheet.create({
 	form: {
 		width: '100%',
+		maxWidth: 400,
 		paddingHorizontal: 16,
 		paddingVertical: 24,
 		gap: 16,

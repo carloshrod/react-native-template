@@ -1,8 +1,7 @@
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
-import Constants from 'expo-constants';
 
 const Main = ({ children }) => {
 	const [fontsLoaded] = useFonts({
@@ -26,22 +25,7 @@ const Main = ({ children }) => {
 
 	if (!fontsLoaded) return null;
 
-	return (
-		<View style={styles.container} onLayout={onLayout}>
-			{children}
-		</View>
-	);
+	return <View onLayout={onLayout}>{children}</View>;
 };
-
-const styles = StyleSheet.create({
-	container: {
-		marginTop: Constants.statusBarHeight,
-		paddingHorizontal: 24,
-		flex: 1,
-		backgroundColor: '#25292E',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});
 
 export default Main;

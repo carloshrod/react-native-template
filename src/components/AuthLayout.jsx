@@ -1,5 +1,5 @@
 import { Image, StyleSheet, View } from 'react-native';
-import React from 'react';
+import Constants from 'expo-constants';
 import Main from './Main';
 
 const AuthLayout = ({ children }) => {
@@ -15,12 +15,14 @@ const AuthLayout = ({ children }) => {
 
 const styles = StyleSheet.create({
 	container: {
+		marginTop: Constants.statusBarHeight,
 		width: '100%',
-		maxWidth: 400,
 		height: '100%',
 		alignItems: 'center',
 		justifyContent: 'center',
 		gap: 40,
+		paddingHorizontal: 24,
+		backgroundColor: '#25292E',
 	},
 });
 

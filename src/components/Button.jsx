@@ -1,8 +1,8 @@
 import { Text, StyleSheet, Pressable } from 'react-native';
 
-const Button = ({ label }) => {
+const Button = ({ label, navigateTo = null }) => {
 	return (
-		<Pressable style={styles.button} onPress={() => console.log('Logging!')}>
+		<Pressable style={styles.button} onPress={navigateTo}>
 			<Text style={styles.label}>{label}</Text>
 		</Pressable>
 	);
