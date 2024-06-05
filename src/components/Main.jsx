@@ -8,6 +8,9 @@ const Main = ({ children }) => {
 		DMSans: require('../../assets/fonts/DMSans-Regular.ttf'),
 		DMSansMedium: require('../../assets/fonts/DMSans-Medium.ttf'),
 		DMSansBold: require('../../assets/fonts/DMSans-Bold.ttf'),
+		Inter: require('../../assets/fonts/Inter-Regular.ttf'),
+		InterSBold: require('../../assets/fonts/Inter-SemiBold.ttf'),
+		InterXBold: require('../../assets/fonts/Inter-ExtraBold.ttf'),
 	});
 
 	useEffect(() => {
