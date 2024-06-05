@@ -13,3 +13,23 @@ export const INPUT_REGISTER_FIELDS = [
 	{ label: 'Contraseña', icon: keyIcon },
 	{ label: 'Confirmar contraseña', icon: keyIcon },
 ];
+
+const visitControlIcon = require('../../assets/images/visit-control.png');
+const appointmentIcon = require('../../assets/images/appointment.png');
+const paymentIcon = require('../../assets/images/payment.png');
+const speakerIcon = require('../../assets/images/speaker.png');
+const documentIcon = require('../../assets/images/document.png');
+const alertIcon = require('../../assets/images/alert.png');
+
+export const NAVLINK_LABELS = [
+	{
+		label: 'Control de Visitas',
+		icon: visitControlIcon,
+		navigateTo: 'AccessControl',
+	},
+	{ label: 'Reservaciones', icon: appointmentIcon, navigateTo: '' },
+	{ label: 'Pagos', icon: paymentIcon, navigateTo: '' },
+	{ label: 'Comunicados', icon: speakerIcon, navigateTo: '' },
+	{ label: 'Clasificado', icon: documentIcon, navigateTo: '' },
+	{ label: 'Incidentes', icon: alertIcon, navigateTo: '' },
+];
