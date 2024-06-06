@@ -11,7 +11,7 @@ const HomeIcon = '../../assets/images/home.png';
 const CalendarIcon = '../../assets/images/calendar.png';
 const QRIcon = '../../assets/images/qr-code.png';
 
-const TabNavigator = () => {
+const PrivateScreens = () => {
 	return (
 		<Tab.Navigator initialRouteName='Home' screenOptions={screenOptions}>
 			<Tab.Screen
@@ -46,9 +46,9 @@ const TabNavigator = () => {
 			/>
 			{/* ⬇ Screens hidden in tabBar ⬇ */}
 			<Tab.Screen
-				name='AccessControl'
+				name='Control de Acceso'
 				component={AccessControl}
-				options={{ headerShown: false, tabBarButton: () => null }}
+				options={{ tabBarButton: () => null }}
 			/>
 		</Tab.Navigator>
 	);
@@ -72,4 +72,4 @@ const screenOptions = {
 	},
 };
 
-export default TabNavigator;
+export default PrivateScreens;

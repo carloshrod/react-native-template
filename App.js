@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/screens/Login';
 import Signup from './src/screens/Signup';
-import PrivateScreens from './src/components/TabNavigator';
+import PrivateScreens from './src/components/PrivateScreens';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +15,7 @@ export default function App() {
 			>
 				<Stack.Screen name='Login' component={Login} />
 				<Stack.Screen name='Signup' component={Signup} />
-				<Stack.Screen name='PrivateScreens' component={PrivateScreens} />
+				<Stack.Screen name='Private' component={PrivateScreens} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
