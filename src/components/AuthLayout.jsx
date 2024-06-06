@@ -1,5 +1,4 @@
 import { Image, StyleSheet, View } from 'react-native';
-import Constants from 'expo-constants';
 import Main from './Main';
 
 const AuthLayout = ({ children }) => {
@@ -15,7 +14,6 @@ const AuthLayout = ({ children }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: Constants.statusBarHeight,
 		width: '100%',
 		height: '100%',
 		alignItems: 'center',

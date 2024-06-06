@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
+import Constants from 'expo-constants';
 
 const Main = ({ children }) => {
 	const [fontsLoaded] = useFonts({
@@ -38,6 +39,7 @@ const Main = ({ children }) => {
 const styles = StyleSheet.create({
 	main: {
 		flex: 1,
+		marginTop: Constants.statusBarHeight,
 	},
 });
 
