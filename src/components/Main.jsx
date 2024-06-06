@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
@@ -28,7 +28,17 @@ const Main = ({ children }) => {
 
 	if (!fontsLoaded) return null;
 
-	return <View onLayout={onLayout}>{children}</View>;
+	return (
+		<View style={styles.main} onLayout={onLayout}>
+			{children}
+		</View>
+	);
 };
+
+const styles = StyleSheet.create({
+	main: {
+		flex: 1,
+	},
+});
 
 export default Main;

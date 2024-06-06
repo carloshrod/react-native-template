@@ -22,6 +22,7 @@ const Home = ({ navigation, route: { name } }) => {
 					/>
 				)}
 				keyExtractor={item => item.label}
+				showsVerticalScrollIndicator={false}
 			/>
 		</PrivateLayout>
 	);

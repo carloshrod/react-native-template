@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
 		width: '100%',
 		maxWidth: 400,
 		gap: 8,
+		marginBottom: 8,
 	},
 	pressable: {
 		width: '100%',
