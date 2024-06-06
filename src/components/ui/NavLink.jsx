@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 
-const chevronRightIcon = '../../assets/images/chevron-right.png';
+const chevronRightIcon = '../../../assets/images/chevron-right.png';
 
 const NavLink = ({ label, icon, navigateTo, navigation }) => {
 	return (

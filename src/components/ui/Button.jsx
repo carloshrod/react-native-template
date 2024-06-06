@@ -1,8 +1,8 @@
 import { Text, StyleSheet, Pressable } from 'react-native';
 
-const Button = ({ label, navigateTo = null }) => {
+const Button = ({ label, onSubmit = () => null }) => {
 	return (
-		<Pressable style={styles.button} onPress={navigateTo}>
+		<Pressable style={styles.button} onPress={onSubmit}>
 			<Text style={styles.label}>{label}</Text>
 		</Pressable>
 	);

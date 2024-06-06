@@ -1,6 +1,6 @@
 import { FlatList, StyleSheet, Text } from 'react-native';
-import PrivateLayout from '../components/PrivateLayout';
-import NavLink from '../components/NavLink';
+import PrivateLayout from '../components/layout/PrivateLayout';
+import NavLink from '../components/ui/NavLink';
 import { NAVLINK_LABELS } from '../utils/consts';
 
 const Home = ({ navigation, route: { name } }) => {

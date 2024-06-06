@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import Input from './Input';
-import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../utils/consts';
+import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../../utils/consts';
 
 const FormAuth = ({ isLogin = false, children }) => {
 	const inputFields = isLogin ? INPUT_LOGIN_FIELDS : INPUT_REGISTER_FIELDS;

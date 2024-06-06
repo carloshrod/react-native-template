@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
 import AccordionCard from './AccordionCard';
 
-const chevronDownIcon = '../../assets/images/chevron-down.png';
-const chevronUpIcon = '../../assets/images/chevron-up.png';
+const chevronDownIcon = '../../../assets/images/chevron-down.png';
+const chevronUpIcon = '../../../assets/images/chevron-up.png';
 
-const Accordion = ({ label }) => {
+const Accordion = props => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleOpen = () => {
@@ -20,9 +20,9 @@ const Accordion = ({ label }) => {
 		<View style={styles.accordion}>
 			<Pressable style={styles.pressable} onPress={handleOpen}>
 				<Image style={styles.icon} source={pressableIcon} />
-				<Text style={styles.pressableLabel}>{label}</Text>
+				<Text style={styles.pressableLabel}>{props.label}</Text>
 			</Pressable>
-			{isOpen ? <AccordionCard /> : null}
+			{isOpen ? <AccordionCard {...props} /> : null}
 		</View>
 	);
 };

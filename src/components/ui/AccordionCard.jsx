@@ -1,14 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-const AccordionCard = () => {
+const AccordionCard = ({ title, date, description }) => {
 	return (
 		<View style={styles.card}>
-			<Text style={styles.cardTitle}>Visita de Luis Perez</Text>
-			<Text style={styles.cardDate}>24/01/2024 18:00 hs</Text>
-			<Text style={styles.cardText}>
-				Lörem ipsum tens eurode kaffeflicka till karade med bysir. Imosk reminat
-				pobelig sedade megalig.
-			</Text>
+			<Text style={styles.cardTitle}>{title}</Text>
+			<Text style={styles.cardDate}>{date}</Text>
+			<Text style={styles.cardText}>{description}</Text>
 		</View>
 	);
 };

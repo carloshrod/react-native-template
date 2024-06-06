@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
-import PrivateLayout from '../components/PrivateLayout';
-import Checkbox from '../components/Checkbox';
-import Grid from '../components/Grid';
+import PrivateLayout from '../components/layout/PrivateLayout';
+import Checkbox from '../components/ui/Checkbox';
+import AccessControlCards from '../components/ui/AccessControlCards';
 
 const AccessControl = ({ navigation, route: { name } }) => {
 	return (
@@ -13,7 +13,7 @@ const AccessControl = ({ navigation, route: { name } }) => {
 			<Text style={styles.title}>
 				Mantené el control de tus visitas desde cualquier lugar
 			</Text>
-			<Grid navigation={navigation} />
+			<AccessControlCards navigation={navigation} />
 		</PrivateLayout>
 	);
 };

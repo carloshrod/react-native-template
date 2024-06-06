@@ -5,7 +5,7 @@ const AuthLayout = ({ children }) => {
 	return (
 		<Main>
 			<View style={styles.container}>
-				<Image source={require('../../assets/images/splash.png')} />
+				<Image source={require('../../../assets/images/splash.png')} />
 				{children}
 			</View>
 		</Main>

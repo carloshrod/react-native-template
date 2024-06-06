@@ -17,13 +17,13 @@ const Navbar = ({ navigation, route }) => {
 		<View style={styles.navBar}>
 			{isHome ? (
 				<>
-					<Image source={require('../../assets/images/menu.png')} />
-					<Image source={require('../../assets/images/navbar-logo.png')} />
+					<Image source={require('../../../assets/images/menu.png')} />
+					<Image source={require('../../../assets/images/navbar-logo.png')} />
 					<Pressable
 						style={styles.notification}
 						onPress={() => setChecked(true)}
 					>
-						<Image source={require('../../assets/images/bell.png')} />
+						<Image source={require('../../../assets/images/bell.png')} />
 						{notificationsLength > 0 && !checked ? (
 							<Text style={styles.notificationDot}>{notificationsLength}</Text>
 						) : null}
@@ -36,7 +36,7 @@ const Navbar = ({ navigation, route }) => {
 						style={styles.back}
 						onPress={() => navigation.goBack()}
 					>
-						<Image source={require('../../assets/images/arrow-left.png')} />
+						<Image source={require('../../../assets/images/arrow-left.png')} />
 					</TouchableOpacity>
 					<Text style={styles.routeName}>{route}</Text>
 				</>

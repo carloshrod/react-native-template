@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
-const toggleOnIcon = '../../assets/images/toggle-on.png';
-const toggleOffIcon = '../../assets/images/toggle-off.png';
+const toggleOnIcon = '../../../assets/images/toggle-on.png';
+const toggleOffIcon = '../../../assets/images/toggle-off.png';
 
 const Checkbox = () => {
 	const [isChecked, setIsChecked] = useState(false);

@@ -61,3 +61,27 @@ export const ACCESS_CONTROL_ITEMS = [
 		navigateTo: 'Control de Acceso',
 	},
 ];
+
+export const VISITOR_LOGS_ITEMS = [
+	{
+		label: 'Eventual',
+		title: 'Visita de Luis Perez',
+		date: '24/01/2024 18:00 hs',
+		description:
+			'Lörem ipsum tens eurode kaffeflicka till karade med bysir. Imosk reminat pobelig sedade megalig.',
+	},
+	{
+		label: 'Frecuente',
+		title: 'Visita de Carlos Hernández',
+		date: '24/01/2024 18:00 hs',
+		description:
+			'Lörem ipsum tens eurode kaffeflicka till karade med bysir. Imosk reminat pobelig sedade megalig.',
+	},
+	{
+		label: 'Serv.Domicilio/Paqueteria',
+		title: 'Visita de Valentina Castro',
+		date: '24/01/2024 18:00 hs',
+		description:
+			'Lörem ipsum tens eurode kaffeflicka till karade med bysir. Imosk reminat pobelig sedade megalig.',
+	},
+];
