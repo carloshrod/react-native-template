@@ -30,7 +30,7 @@ export const NAVLINK_LABELS = [
 	{ label: 'Reservaciones', icon: appointmentIcon, navigateTo: 'Home' },
 	{ label: 'Pagos', icon: paymentIcon, navigateTo: 'Home' },
 	{ label: 'Comunicados', icon: speakerIcon, navigateTo: 'Home' },
-	{ label: 'Clasificado', icon: documentIcon, navigateTo: 'Home' },
+	{ label: 'Clasificados', icon: documentIcon, navigateTo: 'Home' },
 	{ label: 'Incidentes', icon: alertIcon, navigateTo: 'Home' },
 ];
 
