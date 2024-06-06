@@ -13,7 +13,7 @@ const Navbar = ({ navigation, route }) => {
 	const [checked, setChecked] = useState(false);
 	const notificationsLength = 1;
 
-	return (
+	return isHome || navigation ? (
 		<View style={styles.navBar}>
 			{isHome ? (
 				<>
@@ -42,7 +42,7 @@ const Navbar = ({ navigation, route }) => {
 				</>
 			)}
 		</View>
-	);
+	) : null;
 };
 
 const styles = StyleSheet.create({

@@ -30,6 +30,7 @@ const Home = ({ navigation, route: { name } }) => {
 
 const styles = StyleSheet.create({
 	title: {
+		paddingTop: 16,
 		marginBottom: 8,
 		fontFamily: 'DMSansBold',
 		fontSize: 24,

@@ -38,6 +38,7 @@ const Grid = ({ navigation }) => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		paddingBottom: 8,
 	},
 	row: {
 		flexDirection: 'row',

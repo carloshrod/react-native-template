@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 	container: {
 		width: '100%',
 		maxWidth: 400,
+		paddingVertical: 16,
 	},
 });
 
