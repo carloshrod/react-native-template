@@ -25,11 +25,39 @@ export const NAVLINK_LABELS = [
 	{
 		label: 'Control de Visitas',
 		icon: visitControlIcon,
+		navigateTo: 'Control de Acceso',
+	},
+	{ label: 'Reservaciones', icon: appointmentIcon, navigateTo: 'Home' },
+	{ label: 'Pagos', icon: paymentIcon, navigateTo: 'Home' },
+	{ label: 'Comunicados', icon: speakerIcon, navigateTo: 'Home' },
+	{ label: 'Clasificado', icon: documentIcon, navigateTo: 'Home' },
+	{ label: 'Incidentes', icon: alertIcon, navigateTo: 'Home' },
+];
+
+const userCheckIcon = require('../../assets/images/user-check.png');
+const employeeIcon = require('../../assets/images/employee.png');
+const documentBwIcon = require('../../assets/images/document-bw.png');
+const badgeIcon = require('../../assets/images/badge.png');
+
+export const ACCESS_CONTROL_ITEMS = [
+	{
+		label: 'Registro de visitante',
+		icon: userCheckIcon,
 		navigateTo: 'AccessControl',
 	},
-	{ label: 'Reservaciones', icon: appointmentIcon, navigateTo: '' },
-	{ label: 'Pagos', icon: paymentIcon, navigateTo: '' },
-	{ label: 'Comunicados', icon: speakerIcon, navigateTo: '' },
-	{ label: 'Clasificado', icon: documentIcon, navigateTo: '' },
-	{ label: 'Incidentes', icon: alertIcon, navigateTo: '' },
+	{
+		label: 'Empleados domésticos',
+		icon: employeeIcon,
+		navigateTo: 'AccessControl',
+	},
+	{
+		label: 'Bitácoras de entradas',
+		icon: documentBwIcon,
+		navigateTo: 'AccessControl',
+	},
+	{
+		label: 'Tarjetas de acceso',
+		icon: badgeIcon,
+		navigateTo: 'AccessControl',
+	},
 ];

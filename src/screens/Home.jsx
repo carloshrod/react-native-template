@@ -1,26 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text } from 'react-native';
 import PrivateLayout from '../components/PrivateLayout';
 import NavLink from '../components/NavLink';
 import { NAVLINK_LABELS } from '../utils/consts';
 
-const Home = ({ navigation }) => {
+const Home = ({ navigation, route: { name } }) => {
 	const user = 'Leonardo';
 
 	return (
-		<PrivateLayout>
+		<PrivateLayout route={name}>
 			<Text style={styles.title}>Bienvenido {user}</Text>
 			<Text style={styles.subTitle}>¿En qué podemos ayudarte?</Text>
-			<View style={styles.navContainer}>
-				{NAVLINK_LABELS.map(({ label, icon, navigateTo }, index) => (
+			<FlatList
+				style={styles.navContainer}
+				data={NAVLINK_LABELS}
+				renderItem={({ item }) => (
 					<NavLink
-						key={`link-${index}`}
-						label={label}
-						icon={icon}
-						navigateTo={navigateTo}
+						label={item.label}
+						icon={item.icon}
+						navigateTo={item.navigateTo}
 						navigation={navigation}
 					/>
-				))}
-			</View>
+				)}
+				keyExtractor={item => item.label}
+			/>
 		</PrivateLayout>
 	);
 };
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
 	navContainer: {
 		width: '100%',
 		maxWidth: 400,
-		gap: 16,
+		flex: 1,
 		marginTop: 32,
 	},
 });

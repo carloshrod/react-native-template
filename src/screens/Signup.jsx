@@ -11,7 +11,7 @@ const Signup = ({ navigation }) => {
 			<TouchableOpacity
 				activeOpacity={0.7}
 				style={styles.back}
-				onPress={() => navigation.navigate('Login')}
+				onPress={() => navigation.goBack()}
 			>
 				<Image source={require('../../assets/images/arrow-left.png')} />
 			</TouchableOpacity>
