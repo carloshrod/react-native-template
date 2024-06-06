@@ -4,6 +4,7 @@ import Home from '../screens/Home';
 import Events from '../screens/Events';
 import QR from '../screens/QR';
 import AccessControl from '../screens/AccessControl';
+import VisitorLogs from '../screens/VisitorLogs';
 
 const Tab = createBottomTabNavigator();
 
@@ -48,6 +49,11 @@ const PrivateScreens = () => {
 			<Tab.Screen
 				name='Control de Acceso'
 				component={AccessControl}
+				options={{ tabBarButton: () => null }}
+			/>
+			<Tab.Screen
+				name='Registros de visitante'
+				component={VisitorLogs}
 				options={{ tabBarButton: () => null }}
 			/>
 		</Tab.Navigator>

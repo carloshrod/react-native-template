@@ -43,7 +43,7 @@ export const ACCESS_CONTROL_ITEMS = [
 	{
 		label: 'Registro de visitante',
 		icon: userCheckIcon,
-		navigateTo: 'Control de Acceso',
+		navigateTo: 'Registros de visitante',
 	},
 	{
 		label: 'Empleados domésticos',
