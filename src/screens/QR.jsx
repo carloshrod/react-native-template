@@ -7,7 +7,7 @@ const QR = () => {
 	return (
 		<PrivateLayout>
 			<ScrollView
-				contentContainerStyle={styles.mainContainer}
+				contentContainerStyle={styles.scrollContainer}
 				showsVerticalScrollIndicator={false}
 			>
 				<QRCard />
@@ -18,7 +18,7 @@ const QR = () => {
 };
 
 const styles = StyleSheet.create({
-	mainContainer: {
+	scrollContainer: {
 		gap: 16,
 		paddingVertical: 32,
 	},

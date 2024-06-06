@@ -85,3 +85,24 @@ export const VISITOR_LOGS_ITEMS = [
 			'Lörem ipsum tens eurode kaffeflicka till karade med bysir. Imosk reminat pobelig sedade megalig.',
 	},
 ];
+
+export const DOCUMENTS_ITEMS = [
+	{
+		title: 'Estados financieros',
+		subtitle: 'Finanzas',
+		description: 'Balance general y estado de resultados',
+		date: 'Noviembre 2023',
+	},
+	{
+		title: 'Estados financieros',
+		subtitle: 'Finanzas',
+		description: 'Balance general y estado de resultados',
+		date: 'Diciembre 2023',
+	},
+	{
+		title: 'Estados financieros',
+		subtitle: 'Finanzas',
+		description: 'Balance general y estado de resultados',
+		date: 'Enero 2024',
+	},
+];
