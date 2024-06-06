@@ -43,21 +43,21 @@ export const ACCESS_CONTROL_ITEMS = [
 	{
 		label: 'Registro de visitante',
 		icon: userCheckIcon,
-		navigateTo: 'AccessControl',
+		navigateTo: 'Control de Acceso',
 	},
 	{
 		label: 'Empleados domésticos',
 		icon: employeeIcon,
-		navigateTo: 'AccessControl',
+		navigateTo: 'Control de Acceso',
 	},
 	{
 		label: 'Bitácoras de entradas',
 		icon: documentBwIcon,
-		navigateTo: 'AccessControl',
+		navigateTo: 'Control de Acceso',
 	},
 	{
 		label: 'Tarjetas de acceso',
 		icon: badgeIcon,
-		navigateTo: 'AccessControl',
+		navigateTo: 'Control de Acceso',
 	},
 ];

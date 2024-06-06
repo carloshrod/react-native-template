@@ -5,6 +5,7 @@ import {
 	Dimensions,
 	FlatList,
 	Image,
+	Pressable,
 } from 'react-native';
 import { ACCESS_CONTROL_ITEMS } from '../utils/consts';
 
@@ -12,16 +13,19 @@ const { width } = Dimensions.get('window');
 const columnCount = 2;
 const itemWidth = (width - 14) / columnCount - 32;
 
-const Grid = () => {
+const Grid = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<FlatList
 				data={ACCESS_CONTROL_ITEMS}
 				renderItem={({ item }) => (
-					<View style={styles.gridItem}>
+					<Pressable
+						style={styles.gridItem}
+						onPress={() => navigation.navigate(item.navigateTo)}
+					>
 						<Image source={item.icon} />
 						<Text style={styles.gridItemLabel}>{item.label}</Text>
-					</View>
+					</Pressable>
 				)}
 				keyExtractor={item => item.label}
 				numColumns={columnCount}

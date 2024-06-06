@@ -13,7 +13,7 @@ const AccessControl = ({ navigation, route: { name } }) => {
 			<Text style={styles.title}>
 				Mantené el control de tus visitas desde cualquier lugar
 			</Text>
-			<Grid />
+			<Grid navigation={navigation} />
 		</PrivateLayout>
 	);
 };
