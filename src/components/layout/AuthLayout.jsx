@@ -1,11 +1,12 @@
 import { Image, StyleSheet, View } from 'react-native';
 import Main from './Main';
+import { splash } from '../../utils/images';
 
 const AuthLayout = ({ children }) => {
 	return (
 		<Main>
 			<View style={styles.container}>
-				<Image source={require('../../../assets/images/splash.png')} />
+				<Image source={splash} />
 				{children}
 			</View>
 		</Main>

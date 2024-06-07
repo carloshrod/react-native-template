@@ -1,7 +1,5 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
-
-const logo = '../../../assets/images/splash.png';
-const qrExample = '../../../assets/images/qr-example.png';
+import { qrExample, splash } from '../../utils/images';
 
 const QRCard = () => {
 	const createdAt = '24/01/2024 18:00 hs';
@@ -10,9 +8,9 @@ const QRCard = () => {
 
 	return (
 		<View style={styles.container}>
-			<Image style={styles.logo} source={require(logo)} />
+			<Image style={styles.logo} source={splash} />
 			<View style={styles.scanContainer}>
-				<Image style={styles.image} source={require(qrExample)} />
+				<Image style={styles.image} source={qrExample} />
 				<Text style={styles.scanText}>SCAN ME</Text>
 			</View>
 			<View style={styles.info}>

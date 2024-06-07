@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet } from 'react-native';
 import PrivateLayout from '../components/layout/PrivateLayout';
 import Accordion from '../components/ui/Accordion';
-import { VISITOR_LOGS_ITEMS } from '../utils/consts';
+import { VISITOR_LOGS_ITEMS } from '../utils/arrays';
 
 const VisitorLogs = ({ navigation, route: { name } }) => {
 	return (

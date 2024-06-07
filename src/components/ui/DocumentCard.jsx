@@ -1,14 +1,12 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
-
-const documentIcon = '../../../assets/images/document-bw.png';
-const clipIcon = '../../../assets/images/clip.png';
+import { clipIcon, documentBwIcon } from '../../utils/icons';
 
 const DocumentCard = ({ title, subtitle, description, date }) => {
 	return (
 		<View style={styles.card}>
 			<View style={styles.cardHeader}>
 				<View style={styles.iconContainer}>
-					<Image style={styles.documentIcon} source={require(documentIcon)} />
+					<Image style={styles.documentIcon} source={documentBwIcon} />
 				</View>
 				<View style={styles.titleContainer}>
 					<Text style={styles.cardTitle}>{title}</Text>
@@ -24,7 +22,7 @@ const DocumentCard = ({ title, subtitle, description, date }) => {
 				onPress={() => alert('Viendo documento!')}
 			>
 				<Text style={styles.cardFooterText}>VER DOCUMENTO</Text>
-				<Image source={require(clipIcon)} />
+				<Image source={clipIcon} />
 			</Pressable>
 		</View>
 	);

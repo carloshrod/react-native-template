@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity, Image } from 'react-native';
+import { arrowLeftIcon } from '../../utils/icons';
 
 const GoBack = ({ top = 20, left = 20 }) => {
 	const navigation = useNavigation();
@@ -10,7 +11,7 @@ const GoBack = ({ top = 20, left = 20 }) => {
 			style={{ position: 'absolute', top, left }}
 			onPress={() => navigation.goBack()}
 		>
-			<Image source={require('../../../assets/images/arrow-left.png')} />
+			<Image source={arrowLeftIcon} />
 		</TouchableOpacity>
 	);
 };

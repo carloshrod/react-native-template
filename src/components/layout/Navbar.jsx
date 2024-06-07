@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 import GoBack from '../ui/GoBack';
+import { bellIcon, menuIcon } from '../../utils/icons';
+import { navbarLogo } from '../../utils/images';
 
 const Navbar = ({ navigation, route }) => {
 	const isHome = route?.toLowerCase() === 'home';
@@ -11,13 +13,13 @@ const Navbar = ({ navigation, route }) => {
 		<View style={styles.navBar}>
 			{isHome ? (
 				<>
-					<Image source={require('../../../assets/images/menu.png')} />
-					<Image source={require('../../../assets/images/navbar-logo.png')} />
+					<Image source={menuIcon} />
+					<Image source={navbarLogo} />
 					<Pressable
 						style={styles.notification}
 						onPress={() => setChecked(true)}
 					>
-						<Image source={require('../../../assets/images/bell.png')} />
+						<Image source={bellIcon} />
 						{notificationsLength > 0 && !checked ? (
 							<Text style={styles.notificationDot}>{notificationsLength}</Text>
 						) : null}

@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet } from 'react-native';
 import PrivateLayout from '../components/layout/PrivateLayout';
 import DocumentCard from '../components/ui/DocumentCard';
-import { DOCUMENTS_ITEMS } from '../utils/consts';
+import { DOCUMENTS_ITEMS } from '../utils/arrays';
 
 const Documents = ({ navigation, route: { name } }) => {
 	return (

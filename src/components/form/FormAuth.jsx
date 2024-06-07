@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import Input from './Input';
-import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../../utils/consts';
+import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../../utils/arrays';
 import { useRoute } from '@react-navigation/native';
 import Button from '../ui/Button';
 
@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FFFFFF',
 		borderRadius: 16,
 		elevation: 3,
-		shadowColor: '#000000', // Color de la sombra
-		shadowOffset: { width: 0, height: 4 }, // Desplazamiento de la sombra (x, y)
-		shadowOpacity: 0.33, // Opacidad de la sombra
+		shadowColor: '#000000',
+		shadowOffset: { width: 0, height: 4 },
+		shadowOpacity: 0.33,
 		shadowRadius: 24,
 	},
 	title: {

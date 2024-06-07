@@ -5,12 +5,9 @@ import Events from '../screens/Events';
 import QR from '../screens/QR';
 import AccessControl from '../screens/AccessControl';
 import VisitorLogs from '../screens/VisitorLogs';
+import { CalendarIcon, HomeIcon, QRIcon } from '../utils/icons';
 
 const Tab = createBottomTabNavigator();
-
-const HomeIcon = '../../assets/images/home.png';
-const CalendarIcon = '../../assets/images/calendar.png';
-const QRIcon = '../../assets/images/qr-code.png';
 
 const ProtectedScreens = () => {
 	return (
@@ -20,7 +17,7 @@ const ProtectedScreens = () => {
 				component={Home}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<Image style={{ tintColor: color }} source={require(HomeIcon)} />
+						<Image style={{ tintColor: color }} source={HomeIcon} />
 					),
 				}}
 			/>
@@ -29,10 +26,7 @@ const ProtectedScreens = () => {
 				component={Events}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<Image
-							style={{ tintColor: color }}
-							source={require(CalendarIcon)}
-						/>
+						<Image style={{ tintColor: color }} source={CalendarIcon} />
 					),
 				}}
 			/>
@@ -41,7 +35,7 @@ const ProtectedScreens = () => {
 				component={QR}
 				options={{
 					tabBarIcon: ({ color }) => (
-						<Image style={{ tintColor: color }} source={require(QRIcon)} />
+						<Image style={{ tintColor: color }} source={QRIcon} />
 					),
 				}}
 			/>

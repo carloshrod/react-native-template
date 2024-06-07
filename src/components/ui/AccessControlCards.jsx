@@ -7,7 +7,7 @@ import {
 	Image,
 	Pressable,
 } from 'react-native';
-import { ACCESS_CONTROL_ITEMS } from '../../utils/consts';
+import { ACCESS_CONTROL_ITEMS } from '../../utils/arrays';
 
 const { width } = Dimensions.get('window');
 const columnCount = 2;

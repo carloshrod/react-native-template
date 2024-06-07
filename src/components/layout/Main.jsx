@@ -3,15 +3,23 @@ import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import Constants from 'expo-constants';
+import {
+	DMSans,
+	DMSansBold,
+	DMSansMedium,
+	Inter,
+	InterSBold,
+	InterXBold,
+} from '../../utils/fonts';
 
 const Main = ({ children }) => {
 	const [fontsLoaded] = useFonts({
-		DMSans: require('../../../assets/fonts/DMSans-Regular.ttf'),
-		DMSansMedium: require('../../../assets/fonts/DMSans-Medium.ttf'),
-		DMSansBold: require('../../../assets/fonts/DMSans-Bold.ttf'),
-		Inter: require('../../../assets/fonts/Inter-Regular.ttf'),
-		InterSBold: require('../../../assets/fonts/Inter-SemiBold.ttf'),
-		InterXBold: require('../../../assets/fonts/Inter-ExtraBold.ttf'),
+		DMSans,
+		DMSansMedium,
+		DMSansBold,
+		Inter,
+		InterSBold,
+		InterXBold,
 	});
 
 	useEffect(() => {

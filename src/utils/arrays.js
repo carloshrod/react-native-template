@@ -1,6 +1,18 @@
-const userIcon = require('../../assets/images/user.png');
-const mailIcon = require('../../assets/images/mail.png');
-const keyIcon = require('../../assets/images/key.png');
+import {
+	alertIcon,
+	appointmentIcon,
+	badgeIcon,
+	documentBwIcon,
+	documentIcon,
+	employeeIcon,
+	keyIcon,
+	mailIcon,
+	paymentIcon,
+	speakerIcon,
+	userCheckIcon,
+	userIcon,
+	visitControlIcon,
+} from './icons';
 
 export const INPUT_LOGIN_FIELDS = [
 	{ label: 'Ingresa tu email', icon: mailIcon },
@@ -14,13 +26,6 @@ export const INPUT_REGISTER_FIELDS = [
 	{ label: 'Confirmar contraseña', icon: keyIcon },
 ];
 
-const visitControlIcon = require('../../assets/images/visit-control.png');
-const appointmentIcon = require('../../assets/images/appointment.png');
-const paymentIcon = require('../../assets/images/payment.png');
-const speakerIcon = require('../../assets/images/speaker.png');
-const documentIcon = require('../../assets/images/document.png');
-const alertIcon = require('../../assets/images/alert.png');
-
 export const NAVLINK_LABELS = [
 	{
 		label: 'Control de Visitas',
@@ -33,11 +38,6 @@ export const NAVLINK_LABELS = [
 	{ label: 'Clasificados', icon: documentIcon, navigateTo: 'Home' },
 	{ label: 'Incidentes', icon: alertIcon, navigateTo: 'Home' },
 ];
-
-const userCheckIcon = require('../../assets/images/user-check.png');
-const employeeIcon = require('../../assets/images/employee.png');
-const documentBwIcon = require('../../assets/images/document-bw.png');
-const badgeIcon = require('../../assets/images/badge.png');
 
 export const ACCESS_CONTROL_ITEMS = [
 	{

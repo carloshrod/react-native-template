@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
 import AccordionCard from './AccordionCard';
-
-const chevronDownIcon = '../../../assets/images/chevron-down.png';
-const chevronUpIcon = '../../../assets/images/chevron-up.png';
+import { chevronDownIcon, chevronUpIcon } from '../../utils/icons';
 
 const Accordion = props => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +10,7 @@ const Accordion = props => {
 		setIsOpen(!isOpen);
 	};
 
-	const pressableIcon = isOpen
-		? require(chevronUpIcon)
-		: require(chevronDownIcon);
+	const pressableIcon = isOpen ? chevronUpIcon : chevronDownIcon;
 
 	return (
 		<View style={styles.accordion}>
