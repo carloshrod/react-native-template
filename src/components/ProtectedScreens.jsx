@@ -12,7 +12,7 @@ const HomeIcon = '../../assets/images/home.png';
 const CalendarIcon = '../../assets/images/calendar.png';
 const QRIcon = '../../assets/images/qr-code.png';
 
-const PrivateScreens = () => {
+const ProtectedScreens = () => {
 	return (
 		<Tab.Navigator initialRouteName='Home' screenOptions={screenOptions}>
 			<Tab.Screen
@@ -78,4 +78,4 @@ const screenOptions = {
 	},
 };
 
-export default PrivateScreens;
+export default ProtectedScreens;
