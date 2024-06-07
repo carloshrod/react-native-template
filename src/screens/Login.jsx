@@ -1,17 +1,15 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AuthLayout from '../components/layout/AuthLayout';
 import FormAuth from '../components/form/FormAuth';
-import Button from '../components/ui/Button';
+import { useNavigation } from '@react-navigation/native';
 
-const Login = ({ navigation, route: { name } }) => {
-	const isLogin = name?.toLowerCase() === 'login';
-
+const Login = () => {
+	const navigation = useNavigation();
 	const onSubmit = () => navigation?.navigate('Private');
 
 	return (
 		<AuthLayout>
-			<FormAuth isLogin={isLogin}>
-				<Button label='Iniciar Sesión' onSubmit={onSubmit} />
+			<FormAuth onSubmit={onSubmit}>
 				<View style={styles.linksContainer}>
 					<Text style={styles.link}>Olvidaste tu contraseña?</Text>
 					<View style={styles.separator} />

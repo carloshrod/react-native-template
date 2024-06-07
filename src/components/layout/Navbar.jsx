@@ -1,12 +1,6 @@
 import { useState } from 'react';
-import {
-	View,
-	Text,
-	Image,
-	TouchableOpacity,
-	StyleSheet,
-	Pressable,
-} from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import GoBack from '../ui/GoBack';
 
 const Navbar = ({ navigation, route }) => {
 	const isHome = route?.toLowerCase() === 'home';
@@ -31,13 +25,7 @@ const Navbar = ({ navigation, route }) => {
 				</>
 			) : (
 				<>
-					<TouchableOpacity
-						activeOpacity={0.7}
-						style={styles.back}
-						onPress={() => navigation.goBack()}
-					>
-						<Image source={require('../../../assets/images/arrow-left.png')} />
-					</TouchableOpacity>
+					<GoBack top={16} left={24} />
 					<Text style={styles.routeName}>{route}</Text>
 				</>
 			)}
@@ -71,11 +59,6 @@ const styles = StyleSheet.create({
 		fontSize: 12,
 		color: '#FFFFFF',
 		borderRadius: 50,
-	},
-	back: {
-		position: 'absolute',
-		top: 16,
-		left: 24,
 	},
 	routeName: {
 		margin: 'auto',

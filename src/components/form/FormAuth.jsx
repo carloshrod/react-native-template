@@ -1,12 +1,18 @@
 import { View, Text, StyleSheet } from 'react-native';
 import Input from './Input';
 import { INPUT_LOGIN_FIELDS, INPUT_REGISTER_FIELDS } from '../../utils/consts';
+import { useRoute } from '@react-navigation/native';
+import Button from '../ui/Button';
 
-const FormAuth = ({ isLogin = false, children }) => {
+const FormAuth = ({ onSubmit, children }) => {
+	const { name } = useRoute();
+	const isLogin = name?.toLowerCase() === 'login';
+
 	const inputFields = isLogin ? INPUT_LOGIN_FIELDS : INPUT_REGISTER_FIELDS;
 	const title = isLogin
 		? 'INICIA SESIÓN CON TU CUENTA'
 		: 'CREAR UNA NUEVA CUENTA';
+	const btnLabel = isLogin ? 'Iniciar Sesión' : 'Registrarse';
 
 	return (
 		<View style={styles.form}>
@@ -14,6 +20,7 @@ const FormAuth = ({ isLogin = false, children }) => {
 			{inputFields.map((input, index) => (
 				<Input key={index} label={input.label} icon={input.icon} />
 			))}
+			<Button label={btnLabel} onSubmit={onSubmit} />
 			{children}
 		</View>
 	);
