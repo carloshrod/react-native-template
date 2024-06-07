@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 	cardTitle: {
 		fontFamily: 'DMSansBold',
 		fontSize: 16,
-		color: '#FFCD06',
+		color: '#FFFFFF',
 	},
 	cardDate: {
 		fontFamily: 'DMSans',
