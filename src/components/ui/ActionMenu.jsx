@@ -4,7 +4,12 @@ import { ACTIONS_MENU } from '../../utils/arrays';
 
 const ActionMenu = ({ isOpen, onToggle }) => {
 	return (
-		<View style={styles.actionMenu}>
+		<View
+			style={[
+				styles.actionMenu,
+				{ backgroundColor: isOpen ? '#272620b0' : 'transparent' },
+			]}
+		>
 			<Pressable style={styles.dotsContainer} onPress={onToggle}>
 				<Image style={styles.dots} source={dotsIcon} />
 			</Pressable>
@@ -17,7 +22,7 @@ const ActionMenu = ({ isOpen, onToggle }) => {
 						>
 							<Image style={styles.buttonIcon} source={icon} />
 						</Pressable>
-						<Text>{label}</Text>
+						<Text style={styles.buttonLabel}>{label}</Text>
 					</View>
 				))}
 			</View>
@@ -26,50 +31,45 @@ const ActionMenu = ({ isOpen, onToggle }) => {
 };
 
 const styles = StyleSheet.create({
+	actionMenu: {
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		bottom: 0,
+		right: 0,
+	},
 	dotsContainer: {
-		padding: 5,
-		justifyContent: 'center',
-		alignItems: 'center',
+		padding: 20,
+		alignItems: 'flex-end',
 	},
 	dots: {
 		height: 16,
 		width: 16,
 	},
-	actionMenu: {
-		position: 'relative',
-	},
 	menuItems: {
-		position: 'absolute',
-		top: 24,
-		right: 14,
-		width: 200,
-		height: 90,
+		width: '100%',
 		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-		paddingHorizontal: 6,
-		gap: 24,
-		backgroundColor: '#FFFFFF',
-		zIndex: 5,
-		borderTopStartRadius: 10,
-		borderBottomStartRadius: 10,
-		borderBottomEndRadius: 10,
 	},
 	buttonContainer: {
+		margin: 'auto',
 		alignItems: 'center',
-		justifyContent: 'center',
+		gap: 8,
 	},
 	button: {
 		height: 40,
 		width: 40,
-		backgroundColor: '#E4E8EB',
+		backgroundColor: '#FFCD06',
 		borderRadius: 100,
 	},
 	buttonIcon: {
 		height: 20,
 		width: 20,
 		margin: 'auto',
-		tintColor: '#000000',
+	},
+	buttonLabel: {
+		paddingHorizontal: 6,
+		backgroundColor: '#FFFFFF',
+		borderRadius: 4,
 	},
 });
 
