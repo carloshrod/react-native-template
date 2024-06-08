@@ -15,8 +15,7 @@ const Navbar = () => {
 	const [checked, setChecked] = useState(false);
 
 	const HIDDEN_NAVBAR = ['Eventos', 'QR'];
-	const isDrawer =
-		name?.toLowerCase() === 'drawer' || name?.toLowerCase() === 'documentos';
+	const isDrawer = name?.toLowerCase() === 'drawer';
 	const isHiddenNavbar = HIDDEN_NAVBAR.includes(name);
 
 	const notificationsLength = 1;

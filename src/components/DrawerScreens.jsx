@@ -31,9 +31,9 @@ const DrawerScreens = () => {
 				drawerLabelStyle: {
 					fontFamily: 'DMSansBold',
 				},
-				drawerActiveTintColor: '#000000',
+				drawerActiveTintColor: '#FFFFFF',
 				drawerInactiveTintColor: '#FFFFFF',
-				drawerActiveBackgroundColor: '#FFCD06',
+				drawerActiveBackgroundColor: 'transparent',
 			}}
 			drawerContent={props => {
 				return <CustomDrawer {...props} />;
