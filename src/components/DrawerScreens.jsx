@@ -9,7 +9,6 @@ import {
 	settingIcon,
 	userGroupIcon,
 } from '../utils/icons';
-import Constants from 'expo-constants';
 import CustomDrawer from './layout/CustomDrawer';
 
 const Drawer = createDrawerNavigator();
@@ -19,22 +18,7 @@ const DrawerScreens = () => {
 		<Drawer.Navigator
 			initialRouteName='Home'
 			backBehavior='history'
-			screenOptions={{
-				headerShown: false,
-				drawerStyle: {
-					backgroundColor: '#1A1C1F',
-					marginTop: Constants.statusBarHeight,
-				},
-				drawerItemStyle: {
-					paddingHorizontal: 5,
-				},
-				drawerLabelStyle: {
-					fontFamily: 'DMSansBold',
-				},
-				drawerActiveTintColor: '#FFFFFF',
-				drawerInactiveTintColor: '#FFFFFF',
-				drawerActiveBackgroundColor: 'transparent',
-			}}
+			screenOptions={screenOptions}
 			drawerContent={props => {
 				return <CustomDrawer {...props} />;
 			}}
@@ -87,6 +71,23 @@ const DrawerScreens = () => {
 			</Drawer.Screen>
 		</Drawer.Navigator>
 	);
+};
+
+const screenOptions = {
+	headerShown: false,
+	drawerStyle: {
+		backgroundColor: '#1A1C1F',
+		paddingVertical: 20,
+	},
+	drawerItemStyle: {
+		paddingHorizontal: 5,
+	},
+	drawerLabelStyle: {
+		fontFamily: 'DMSansBold',
+	},
+	drawerActiveTintColor: '#FFFFFF',
+	drawerInactiveTintColor: '#FFFFFF',
+	drawerActiveBackgroundColor: 'transparent',
 };
 
 export default DrawerScreens;

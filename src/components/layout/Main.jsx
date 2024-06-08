@@ -1,8 +1,7 @@
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { useCallback, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
-import Constants from 'expo-constants';
 import {
 	DMSans,
 	DMSansBold,
@@ -38,17 +37,15 @@ const Main = ({ children }) => {
 	if (!fontsLoaded) return null;
 
 	return (
-		<View style={styles.main} onLayout={onLayout}>
+		<View
+			style={{
+				flex: 1,
+			}}
+			onLayout={onLayout}
+		>
 			{children}
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	main: {
-		flex: 1,
-		marginTop: Constants.statusBarHeight,
-	},
-});
 
 export default Main;
