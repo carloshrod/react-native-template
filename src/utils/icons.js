@@ -33,3 +33,5 @@ export const profileIcon = require('../../assets/images/user-w.png');
 export const settingIcon = require('../../assets/images/setting.png');
 export const logoutIcon = require('../../assets/images/logout.png');
 export const avatarIcon = require('../../assets/images/avatar.png');
+export const dotsIcon = require('../../assets/images/dots.png');
+export const plusIcon = require('../../assets/images/plus.png');

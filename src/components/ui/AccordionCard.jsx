@@ -1,12 +1,31 @@
 import { View, Text, StyleSheet } from 'react-native';
+import ActionMenu from './ActionMenu';
+import { useState } from 'react';
 
-const AccordionCard = ({ title, date, description }) => {
+const AccordionCard = ({ logs }) => {
+	const [openMenuIndex, setOpenMenuIndex] = useState(null);
+
+	const toggleMenu = index => {
+		setOpenMenuIndex(openMenuIndex === index ? null : index);
+	};
 	return (
-		<View style={styles.card}>
-			<Text style={styles.cardTitle}>{title}</Text>
-			<Text style={styles.cardDate}>{date}</Text>
-			<Text style={styles.cardText}>{description}</Text>
-		</View>
+		<>
+			{logs.map(({ title, date, description }, index) => (
+				<View key={`${title}-${index}`} style={styles.card}>
+					<View style={styles.cardHeader}>
+						<View>
+							<Text style={styles.cardTitle}>{title}</Text>
+							<Text style={styles.cardDate}>{date}</Text>
+						</View>
+						<ActionMenu
+							isOpen={openMenuIndex === index}
+							onToggle={() => toggleMenu(index)}
+						/>
+					</View>
+					<Text style={styles.cardText}>{description}</Text>
+				</View>
+			))}
+		</>
 	);
 };
 
@@ -17,6 +36,10 @@ const styles = StyleSheet.create({
 		padding: 16,
 		backgroundColor: '#000000',
 		borderRadius: 8,
+	},
+	cardHeader: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
 	},
 	cardTitle: {
 		fontFamily: 'DMSansBold',

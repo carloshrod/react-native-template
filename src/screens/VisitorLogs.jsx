@@ -1,7 +1,8 @@
-import { FlatList, StyleSheet } from 'react-native';
+import { Alert, FlatList, StyleSheet } from 'react-native';
 import PrivateLayout from '../components/layout/PrivateLayout';
 import Accordion from '../components/ui/Accordion';
-import { VISITOR_LOGS_ITEMS } from '../utils/arrays';
+import { ACTIONS, VISITOR_LOGS_ITEMS } from '../utils/arrays';
+import { FloatingAction } from 'react-native-floating-action';
 
 const VisitorLogs = () => {
 	return (
@@ -12,6 +13,13 @@ const VisitorLogs = () => {
 				renderItem={({ item }) => <Accordion {...item} />}
 				keyExtractor={item => item.label}
 				showsVerticalScrollIndicator={false}
+			/>
+			<FloatingAction
+				actions={ACTIONS}
+				onPressItem={name => {
+					Alert.alert(`Agregando: ${name}`);
+				}}
+				color='#FFCD06'
 			/>
 		</PrivateLayout>
 	);

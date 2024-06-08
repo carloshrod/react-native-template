@@ -15,8 +15,11 @@ const Accordion = props => {
 	return (
 		<View style={styles.accordion}>
 			<Pressable style={styles.pressable} onPress={handleOpen}>
-				<Image style={styles.icon} source={pressableIcon} />
-				<Text style={styles.pressableLabel}>{props.label}</Text>
+				<View style={{ flexDirection: 'row' }}>
+					<Image style={styles.icon} source={pressableIcon} />
+					<Text style={styles.pressableLabel}>{props.label}</Text>
+				</View>
+				<Text style={styles.pressableLength}>{props?.logs?.length}</Text>
 			</Pressable>
 			{isOpen ? <AccordionCard {...props} /> : null}
 		</View>
@@ -34,6 +37,7 @@ const styles = StyleSheet.create({
 		width: '100%',
 		height: 55,
 		flexDirection: 'row',
+		justifyContent: 'space-between',
 		alignItems: 'center',
 		paddingHorizontal: 8,
 		backgroundColor: '#000000',
@@ -48,6 +52,16 @@ const styles = StyleSheet.create({
 		fontFamily: 'DMSansMedium',
 		fontSize: 18,
 		color: '#FFCD06',
+	},
+	pressableLength: {
+		height: 20,
+		minWidth: 26,
+		textAlign: 'center',
+		paddingHorizontal: 2,
+		fontFamily: 'DMSansBold',
+		fontSize: 16,
+		backgroundColor: '#E4E8EB',
+		borderRadius: 6,
 	},
 });
 
