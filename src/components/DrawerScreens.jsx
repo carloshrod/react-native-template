@@ -3,11 +3,11 @@ import Home from '../screens/Home';
 import Documents from '../screens/Documents';
 import { Image } from 'react-native';
 import {
-	carSmIcon,
-	documentSmIcon,
-	profileIcon,
-	settingIcon,
-	userGroupIcon,
+	CarSmIcon,
+	DocumentSmIcon,
+	ProfileIcon,
+	SettingIcon,
+	UserGroupIcon,
 } from '../utils/icons';
 import CustomDrawer from './layout/CustomDrawer';
 
@@ -31,7 +31,7 @@ const DrawerScreens = () => {
 			<Drawer.Screen
 				name='Asociados'
 				options={{
-					drawerIcon: () => <Image source={userGroupIcon} />,
+					drawerIcon: () => <Image source={UserGroupIcon} />,
 				}}
 			>
 				{() => <></>}
@@ -39,7 +39,7 @@ const DrawerScreens = () => {
 			<Drawer.Screen
 				name='Vehículos'
 				options={{
-					drawerIcon: () => <Image source={carSmIcon} />,
+					drawerIcon: () => <Image source={CarSmIcon} />,
 				}}
 			>
 				{() => <></>}
@@ -49,14 +49,14 @@ const DrawerScreens = () => {
 				component={Documents}
 				options={{
 					drawerIcon: ({ color }) => (
-						<Image style={{ tintColor: color }} source={documentSmIcon} />
+						<Image style={{ tintColor: color }} source={DocumentSmIcon} />
 					),
 				}}
 			/>
 			<Drawer.Screen
 				name='Mi perfil'
 				options={{
-					drawerIcon: () => <Image source={profileIcon} />,
+					drawerIcon: () => <Image source={ProfileIcon} />,
 				}}
 			>
 				{() => <></>}
@@ -64,7 +64,7 @@ const DrawerScreens = () => {
 			<Drawer.Screen
 				name='Configuración'
 				options={{
-					drawerIcon: () => <Image source={settingIcon} />,
+					drawerIcon: () => <Image source={SettingIcon} />,
 				}}
 			>
 				{() => <></>}

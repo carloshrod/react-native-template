@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { toggleOffIcon, toggleOnIcon } from '../../utils/icons';
+import { ToggleOffIcon, ToggleOnIcon } from '../../utils/icons';
 
 const Checkbox = () => {
 	const [isChecked, setIsChecked] = useState(false);
@@ -17,9 +17,9 @@ const Checkbox = () => {
 		>
 			<Text style={styles.label}>{isChecked ? 'SÍ' : 'NO'}</Text>
 			{isChecked ? (
-				<Image source={toggleOnIcon} />
+				<Image source={ToggleOnIcon} />
 			) : (
-				<Image source={toggleOffIcon} />
+				<Image source={ToggleOffIcon} />
 			)}
 		</TouchableOpacity>
 	);

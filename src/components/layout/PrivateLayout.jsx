@@ -1,12 +1,23 @@
 import { View, StyleSheet } from 'react-native';
 import Main from './Main';
 import Navbar from './Navbar';
+import { useRoute } from '@react-navigation/native';
 
 const PrivateLayout = ({ children }) => {
+	const { name } = useRoute();
+	const isBgDark = name?.toLocaleLowerCase() !== 'eventos';
+
 	return (
 		<Main>
 			<Navbar />
-			<View style={styles.container}>{children}</View>
+			<View
+				style={[
+					styles.container,
+					{ backgroundColor: isBgDark ? '#25292E' : '#FFFFFF' },
+				]}
+			>
+				{children}
+			</View>
 		</Main>
 	);
 };
@@ -17,7 +28,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		paddingHorizontal: 24,
-		backgroundColor: '#25292E',
 	},
 });
 

@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { maxSpeedIcon, noGarbageIcon, showQrIcon } from '../../utils/icons';
+import { MaxSpeedIcon, NoGarbageIcon, ShowQrIcon } from '../../utils/icons';
 
 const ImportantCard = () => {
 	return (
@@ -7,15 +7,15 @@ const ImportantCard = () => {
 			<Text style={styles.importantText}>¡Importante!</Text>
 			<View style={styles.importantLogoContainer}>
 				<View style={styles.importantLogo}>
-					<Image source={maxSpeedIcon} />
+					<Image source={MaxSpeedIcon} />
 					<Text style={styles.importantLogoText}>Velocidad Máxima</Text>
 				</View>
 				<View style={styles.importantLogo}>
-					<Image source={showQrIcon} />
+					<Image source={ShowQrIcon} />
 					<Text style={styles.importantLogoText}>Mostrar código QR</Text>
 				</View>
 				<View style={styles.importantLogo}>
-					<Image source={noGarbageIcon} />
+					<Image source={NoGarbageIcon} />
 					<Text style={styles.importantLogoText}>No tire basura</Text>
 				</View>
 			</View>

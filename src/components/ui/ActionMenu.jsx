@@ -1,5 +1,5 @@
 import { View, Text, Image, Pressable, StyleSheet, Alert } from 'react-native';
-import { dotsIcon } from '../../utils/icons';
+import { DotsIcon } from '../../utils/icons';
 import { ACTIONS_MENU } from '../../utils/arrays';
 
 const ActionMenu = ({ isOpen, onToggle }) => {
@@ -11,7 +11,7 @@ const ActionMenu = ({ isOpen, onToggle }) => {
 			]}
 		>
 			<Pressable style={styles.dotsContainer} onPress={onToggle}>
-				<Image style={styles.dots} source={dotsIcon} />
+				<Image style={styles.dots} source={DotsIcon} />
 			</Pressable>
 			<View style={[styles.menuItems, { display: isOpen ? 'flex' : 'none' }]}>
 				{ACTIONS_MENU.map(({ icon, label }, index) => (

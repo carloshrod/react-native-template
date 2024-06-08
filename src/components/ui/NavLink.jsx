@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
-import { chevronRightIcon } from '../../utils/icons';
+import { ChevronRightIcon } from '../../utils/icons';
 import { useNavigation } from '@react-navigation/native';
 
 const NavLink = ({ label, icon, navigateTo }) => {
@@ -14,7 +14,7 @@ const NavLink = ({ label, icon, navigateTo }) => {
 				<Image source={icon} />
 				<Text style={styles.labelText}>{label}</Text>
 			</View>
-			<Image source={chevronRightIcon} />
+			<Image source={ChevronRightIcon} />
 		</Pressable>
 	);
 };

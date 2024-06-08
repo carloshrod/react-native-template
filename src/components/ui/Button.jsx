@@ -1,8 +1,8 @@
 import { Text, StyleSheet, Pressable } from 'react-native';
 
-const Button = ({ label, onSubmit = () => null }) => {
+const Button = ({ label, width = undefined, onPress = () => null }) => {
 	return (
-		<Pressable style={styles.button} onPress={onSubmit}>
+		<Pressable style={[styles.button, { width }]} onPress={onPress}>
 			<Text style={styles.label}>{label}</Text>
 		</Pressable>
 	);
@@ -11,8 +11,8 @@ const Button = ({ label, onSubmit = () => null }) => {
 const styles = StyleSheet.create({
 	button: {
 		height: 48,
-		width: '100%',
 		marginTop: 8,
+		paddingHorizontal: 32,
 		backgroundColor: '#000000',
 		borderRadius: 24,
 	},

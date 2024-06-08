@@ -2,7 +2,7 @@ import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { navbarLogo } from '../../utils/images';
-import { avatarIcon, logoutIcon } from '../../utils/icons';
+import { AvatarIcon, LogoutIcon } from '../../utils/icons';
 import { DrawerItemList } from '@react-navigation/drawer';
 
 const CustomDrawer = props => {
@@ -15,13 +15,13 @@ const CustomDrawer = props => {
 					<Image style={styles.logo} source={navbarLogo} />
 				</Pressable>
 				<View style={styles.userInfo}>
-					<Image source={avatarIcon} />
+					<Image source={AvatarIcon} />
 					<Text style={styles.userName}>Leonardo Herrera</Text>
 				</View>
 			</View>
 			<DrawerItemList {...props} />
 			<Pressable style={styles.logout} onPress={handleLogout}>
-				<Image source={logoutIcon} />
+				<Image source={LogoutIcon} />
 				<Text style={styles.logoutLabel}>Cerrar sesión</Text>
 			</Pressable>
 		</SafeAreaView>

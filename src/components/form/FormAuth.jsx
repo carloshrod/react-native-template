@@ -20,7 +20,7 @@ const FormAuth = ({ onSubmit, children }) => {
 			{inputFields.map((input, index) => (
 				<Input key={index} label={input.label} icon={input.icon} />
 			))}
-			<Button label={btnLabel} onSubmit={onSubmit} />
+			<Button label={btnLabel} width='100%' onPress={onSubmit} />
 			{children}
 		</View>
 	);

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, Image, StyleSheet, Pressable, Alert } from 'react-native';
 import GoBack from '../ui/GoBack';
-import { bellIcon, menuIcon } from '../../utils/icons';
+import { BellIcon, MenuIcon } from '../../utils/icons';
 import { navbarLogo } from '../../utils/images';
 import {
 	useNavigation,
@@ -27,7 +27,7 @@ const Navbar = () => {
 			{isDrawer ? (
 				<>
 					<Pressable onPress={handleOpen}>
-						<Image source={menuIcon} />
+						<Image source={MenuIcon} />
 					</Pressable>
 					<Image source={navbarLogo} />
 					<Pressable
@@ -37,7 +37,7 @@ const Navbar = () => {
 							setChecked(true);
 						}}
 					>
-						<Image source={bellIcon} />
+						<Image source={BellIcon} />
 						{notificationsLength > 0 && !checked ? (
 							<Text style={styles.notificationDot}>{notificationsLength}</Text>
 						) : null}

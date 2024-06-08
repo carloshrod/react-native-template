@@ -1,64 +1,64 @@
 import {
-	alertIcon,
-	appointmentIcon,
-	badgeIcon,
-	documentBwIcon,
-	documentIcon,
-	employeeIcon,
-	keyIcon,
-	mailIcon,
-	paymentIcon,
-	plusIcon,
-	speakerIcon,
-	userCheckIcon,
-	userIcon,
-	visitControlIcon,
+	AlertIcon,
+	AppointmentIcon,
+	BadgeIcon,
+	DocumentBwIcon,
+	DocumentIcon,
+	EmployeeIcon,
+	KeyIcon,
+	MailIcon,
+	PaymentIcon,
+	PlusIcon,
+	SpeakerIcon,
+	UserCheckIcon,
+	UserIcon,
+	VisitControlIcon,
 } from './icons';
 
 export const INPUT_LOGIN_FIELDS = [
-	{ label: 'Ingresa tu email', icon: mailIcon },
-	{ label: 'Contraseña', icon: keyIcon },
+	{ label: 'Ingresa tu email', icon: MailIcon },
+	{ label: 'Contraseña', icon: KeyIcon },
 ];
 
 export const INPUT_REGISTER_FIELDS = [
-	{ label: 'Ingresa tu nombre', icon: userIcon },
-	{ label: 'Ingresa tu email', icon: mailIcon },
-	{ label: 'Contraseña', icon: keyIcon },
-	{ label: 'Confirmar contraseña', icon: keyIcon },
+	{ label: 'Ingresa tu nombre', icon: UserIcon },
+	{ label: 'Ingresa tu email', icon: MailIcon },
+	{ label: 'Contraseña', icon: KeyIcon },
+	{ label: 'Confirmar contraseña', icon: KeyIcon },
 ];
 
 export const NAVLINK_LABELS = [
 	{
 		label: 'Control de Visitas',
-		icon: visitControlIcon,
+		icon: VisitControlIcon,
 		navigateTo: 'Control de Acceso',
 	},
-	{ label: 'Reservaciones', icon: appointmentIcon, navigateTo: 'Home' },
-	{ label: 'Pagos', icon: paymentIcon, navigateTo: 'Home' },
-	{ label: 'Comunicados', icon: speakerIcon, navigateTo: 'Home' },
-	{ label: 'Clasificados', icon: documentIcon, navigateTo: 'Home' },
-	{ label: 'Incidentes', icon: alertIcon, navigateTo: 'Home' },
+	{ label: 'Reservaciones', icon: AppointmentIcon, navigateTo: 'Home' },
+	{ label: 'Pagos', icon: PaymentIcon, navigateTo: 'Home' },
+	{ label: 'Comunicados', icon: SpeakerIcon, navigateTo: 'Home' },
+	{ label: 'Clasificados', icon: DocumentIcon, navigateTo: 'Home' },
+	{ label: 'Incidentes', icon: AlertIcon, navigateTo: 'Home' },
 ];
 
 export const ACCESS_CONTROL_ITEMS = [
 	{
 		label: 'Registro de visitante',
-		icon: userCheckIcon,
+		icon: UserCheckIcon,
 		navigateTo: 'Registros de visitante',
 	},
 	{
 		label: 'Empleados domésticos',
-		icon: employeeIcon,
+		icon: EmployeeIcon,
 		navigateTo: 'Control de Acceso',
 	},
 	{
 		label: 'Bitácoras de entradas',
-		icon: documentBwIcon,
+		icon: DocumentBwIcon,
 		navigateTo: 'Control de Acceso',
 	},
 	{
 		label: 'Tarjetas de acceso',
-		icon: badgeIcon,
+		icon: BadgeIcon,
 		navigateTo: 'Control de Acceso',
 	},
 ];
@@ -129,28 +129,28 @@ export const DOCUMENTS_ITEMS = [
 export const ACTIONS = [
 	{
 		text: 'Agregar Visita Eventual',
-		icon: plusIcon,
+		icon: PlusIcon,
 		name: 'eventual',
 		position: 1,
 		color: '#FFCD06',
 	},
 	{
 		text: 'Agregar Visita Frecuente',
-		icon: plusIcon,
+		icon: PlusIcon,
 		name: 'frequent',
 		position: 2,
 		color: '#FFCD06',
 	},
 	{
 		text: 'Agregar Paquetería',
-		icon: plusIcon,
+		icon: PlusIcon,
 		name: 'package',
 		position: 3,
 		color: '#FFCD06',
 	},
 	{
 		text: 'Agregar Empleado',
-		icon: plusIcon,
+		icon: PlusIcon,
 		name: 'employee',
 		position: 4,
 		color: '#FFCD06',
@@ -159,15 +159,15 @@ export const ACTIONS = [
 
 export const ACTIONS_MENU = [
 	{
-		icon: plusIcon,
+		icon: PlusIcon,
 		label: 'Editar',
 	},
 	{
-		icon: plusIcon,
+		icon: PlusIcon,
 		label: 'Copiar',
 	},
 	{
-		icon: plusIcon,
+		icon: PlusIcon,
 		label: 'Borrar',
 	},
 ];
