@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Image, Pressable, StyleSheet, Alert } from 'react-native';
 import { dotsIcon } from '../../utils/icons';
 import { ACTIONS_MENU } from '../../utils/arrays';
 
@@ -11,7 +11,10 @@ const ActionMenu = ({ isOpen, onToggle }) => {
 			<View style={[styles.menuItems, { display: isOpen ? 'flex' : 'none' }]}>
 				{ACTIONS_MENU.map(({ icon, label }, index) => (
 					<View key={`${label}-${index}`} style={styles.buttonContainer}>
-						<Pressable style={styles.button}>
+						<Pressable
+							style={styles.button}
+							onPress={() => Alert.alert(`Acción de ${label}`)}
+						>
 							<Image style={styles.buttonIcon} source={icon} />
 						</Pressable>
 						<Text>{label}</Text>
