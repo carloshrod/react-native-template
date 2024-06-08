@@ -10,7 +10,7 @@ import {
 	userGroupIcon,
 } from '../utils/icons';
 import Constants from 'expo-constants';
-import CustomDrawer from './ui/CustomDrawer';
+import CustomDrawer from './layout/CustomDrawer';
 
 const Drawer = createDrawerNavigator();
 
