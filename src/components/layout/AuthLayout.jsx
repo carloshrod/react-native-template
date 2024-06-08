@@ -1,6 +1,6 @@
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import Main from './Main';
-import { splash } from '../../utils/images';
+import { sosLogo, splash } from '../../utils/images';
 
 const AuthLayout = ({ children }) => {
 	return (
@@ -8,6 +8,10 @@ const AuthLayout = ({ children }) => {
 			<View style={styles.container}>
 				<Image source={splash} />
 				{children}
+			</View>
+			<View style={styles.developedBy}>
+				<Text style={styles.developedByText}>Desarrollado por</Text>
+				<Image source={sosLogo} />
 			</View>
 		</Main>
 	);
@@ -22,6 +26,19 @@ const styles = StyleSheet.create({
 		gap: 40,
 		paddingHorizontal: 24,
 		backgroundColor: '#25292E',
+	},
+	developedBy: {
+		position: 'absolute',
+		bottom: 16,
+		right: 24,
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: 6,
+	},
+	developedByText: {
+		fontSize: 12,
+		color: '#FFFFFF',
 	},
 });
 
