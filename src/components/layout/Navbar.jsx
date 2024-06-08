@@ -17,13 +17,19 @@ const Navbar = () => {
 	const HIDDEN_NAVBAR = ['Eventos', 'QR'];
 	const isDrawer = name?.toLowerCase() === 'drawer';
 	const isHiddenNavbar = HIDDEN_NAVBAR.includes(name);
+	const isLight = name?.toLowerCase() === 'vehículos';
 
 	const notificationsLength = 1;
 
 	const handleOpen = () => navigation.dispatch(DrawerActions.toggleDrawer());
 
 	return isDrawer || !isHiddenNavbar ? (
-		<View style={styles.navBar}>
+		<View
+			style={[
+				styles.navBar,
+				{ backgroundColor: isLight ? '#FFFFFF' : '#25292E' },
+			]}
+		>
 			{isDrawer ? (
 				<>
 					<Pressable onPress={handleOpen}>
@@ -46,7 +52,14 @@ const Navbar = () => {
 			) : (
 				<>
 					<GoBack top={16} left={24} />
-					<Text style={styles.routeName}>{name}</Text>
+					<Text
+						style={[
+							styles.routeName,
+							{ color: isLight ? '#25292E' : '#FFFFFF' },
+						]}
+					>
+						{name}
+					</Text>
 				</>
 			)}
 		</View>
@@ -61,7 +74,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		paddingHorizontal: 24,
-		backgroundColor: '#25292E',
 	},
 	notification: {
 		position: 'relative',
@@ -84,7 +96,6 @@ const styles = StyleSheet.create({
 		margin: 'auto',
 		fontFamily: 'DMSansBold',
 		fontSize: 18,
-		color: '#FFFFFF',
 	},
 });
 

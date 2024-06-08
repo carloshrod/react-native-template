@@ -29,6 +29,7 @@ export const ShowQrIcon = require('../../assets/images/show-qr.png');
 export const NoGarbageIcon = require('../../assets/images/no-garbage.png');
 export const UserGroupIcon = require('../../assets/images/user-group.png');
 export const CarSmIcon = require('../../assets/images/car-sm.png');
+export const CarLgIcon = require('../../assets/images/car-lg.png');
 export const DocumentSmIcon = require('../../assets/images/document-sm.png');
 export const ProfileIcon = require('../../assets/images/user-w.png');
 export const SettingIcon = require('../../assets/images/setting.png');

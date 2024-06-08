@@ -5,7 +5,8 @@ import { useRoute } from '@react-navigation/native';
 
 const PrivateLayout = ({ children }) => {
 	const { name } = useRoute();
-	const isBgDark = name?.toLocaleLowerCase() !== 'eventos';
+	const BG_LIGHT = ['eventos', 'vehículos'];
+	const isBgDark = !BG_LIGHT.includes(name?.toLowerCase());
 
 	return (
 		<Main>

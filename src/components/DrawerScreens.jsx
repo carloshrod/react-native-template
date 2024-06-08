@@ -1,7 +1,8 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from '../screens/Home';
-import Documents from '../screens/Documents';
 import { Image } from 'react-native';
+import Home from '../screens/Home';
+import Vehicles from '../screens/Vehicles';
+import Documents from '../screens/Documents';
 import {
 	CarSmIcon,
 	DocumentSmIcon,
@@ -38,12 +39,11 @@ const DrawerScreens = () => {
 			</Drawer.Screen>
 			<Drawer.Screen
 				name='Vehículos'
+				component={Vehicles}
 				options={{
 					drawerIcon: () => <Image source={CarSmIcon} />,
 				}}
-			>
-				{() => <></>}
-			</Drawer.Screen>
+			/>
 			<Drawer.Screen
 				name='Documentos'
 				component={Documents}
