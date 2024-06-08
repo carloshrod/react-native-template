@@ -1,18 +1,50 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {
+	Image,
+	Keyboard,
+	KeyboardAvoidingView,
+	Platform,
+	StyleSheet,
+	Text,
+	View,
+} from 'react-native';
 import Main from './Main';
 import { sosLogo, splash } from '../../utils/images';
+import { useEffect, useState } from 'react';
 
 const AuthLayout = ({ children }) => {
+	const [keyboardShown, setKeyboardShown] = useState(false);
+
+	useEffect(() => {
+		const keyboardDidShowListener = Keyboard.addListener(
+			'keyboardDidShow',
+			() => setKeyboardShown(true),
+		);
+		const keyboardDidHideListener = Keyboard.addListener(
+			'keyboardDidHide',
+			() => setKeyboardShown(false),
+		);
+
+		return () => {
+			keyboardDidShowListener.remove();
+			keyboardDidHideListener.remove();
+		};
+	}, []);
+
 	return (
 		<Main>
-			<View style={styles.container}>
+			<KeyboardAvoidingView
+				style={styles.container}
+				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+			>
 				<Image source={splash} />
 				{children}
-			</View>
-			<View style={styles.developedBy}>
-				<Text style={styles.developedByText}>Desarrollado por</Text>
-				<Image source={sosLogo} />
-			</View>
+			</KeyboardAvoidingView>
+			{!keyboardShown && (
+				<View style={styles.developedBy}>
+					<Text style={styles.developedByText}>Desarrollado por</Text>
+					<Image source={sosLogo} />
+				</View>
+			)}
 		</Main>
 	);
 };
