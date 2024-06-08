@@ -3,9 +3,9 @@ import PrivateLayout from '../components/layout/PrivateLayout';
 import DocumentCard from '../components/ui/DocumentCard';
 import { DOCUMENTS_ITEMS } from '../utils/arrays';
 
-const Documents = ({ navigation, route: { name } }) => {
+const Documents = () => {
 	return (
-		<PrivateLayout navigation={navigation} route={name}>
+		<PrivateLayout>
 			<FlatList
 				contentContainerStyle={styles.scrollContainer}
 				style={styles.container}

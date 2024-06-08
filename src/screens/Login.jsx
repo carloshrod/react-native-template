@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
 	const navigation = useNavigation();
-	const onSubmit = () => navigation?.navigate('Private');
+	const onSubmit = () => navigation?.navigate('Protected');
 
 	return (
 		<AuthLayout>

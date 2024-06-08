@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable, Alert } from 'react-native';
 import { clipIcon, documentBwIcon } from '../../utils/icons';
 
 const DocumentCard = ({ title, subtitle, description, date }) => {
@@ -19,7 +19,7 @@ const DocumentCard = ({ title, subtitle, description, date }) => {
 			</View>
 			<Pressable
 				style={styles.cardFooter}
-				onPress={() => alert('Viendo documento!')}
+				onPress={() => Alert.alert('Viendo documento!')}
 			>
 				<Text style={styles.cardFooterText}>VER DOCUMENTO</Text>
 				<Image source={clipIcon} />

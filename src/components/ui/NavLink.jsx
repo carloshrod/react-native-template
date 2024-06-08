@@ -1,7 +1,10 @@
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 import { chevronRightIcon } from '../../utils/icons';
+import { useNavigation } from '@react-navigation/native';
 
-const NavLink = ({ label, icon, navigateTo, navigation }) => {
+const NavLink = ({ label, icon, navigateTo }) => {
+	const navigation = useNavigation();
+
 	return (
 		<Pressable
 			style={styles.navLink}

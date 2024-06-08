@@ -3,9 +3,9 @@ import PrivateLayout from '../components/layout/PrivateLayout';
 import Checkbox from '../components/ui/Checkbox';
 import AccessControlCards from '../components/ui/AccessControlCards';
 
-const AccessControl = ({ navigation, route: { name } }) => {
+const AccessControl = () => {
 	return (
-		<PrivateLayout navigation={navigation} route={name}>
+		<PrivateLayout>
 			<View style={styles.allow}>
 				<Text style={styles.allowText}>Permitir visitas</Text>
 				<Checkbox />
@@ -13,7 +13,7 @@ const AccessControl = ({ navigation, route: { name } }) => {
 			<Text style={styles.title}>
 				Mantené el control de tus visitas desde cualquier lugar
 			</Text>
-			<AccessControlCards navigation={navigation} />
+			<AccessControlCards />
 		</PrivateLayout>
 	);
 };

@@ -2,10 +2,10 @@ import { View, StyleSheet } from 'react-native';
 import Main from './Main';
 import Navbar from './Navbar';
 
-const PrivateLayout = ({ navigation, route = undefined, children }) => {
+const PrivateLayout = ({ children }) => {
 	return (
 		<Main>
-			<Navbar navigation={navigation} route={route} />
+			<Navbar />
 			<View style={styles.container}>{children}</View>
 		</Main>
 	);

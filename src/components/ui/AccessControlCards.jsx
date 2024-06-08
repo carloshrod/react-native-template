@@ -8,12 +8,15 @@ import {
 	Pressable,
 } from 'react-native';
 import { ACCESS_CONTROL_ITEMS } from '../../utils/arrays';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 const columnCount = 2;
 const itemWidth = (width - 14) / columnCount - 32;
 
-const Grid = ({ navigation }) => {
+const AccessControlCards = () => {
+	const navigation = useNavigation();
+
 	return (
 		<View style={styles.container}>
 			<FlatList
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
 		borderRadius: 8,
 	},
 	gridItemLabel: {
-		width: '50%',
+		width: '60%',
 		marginTop: 8,
 		textAlign: 'center',
 		fontFamily: 'DMSansBold',
@@ -63,4 +66,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default Grid;
+export default AccessControlCards;

@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/screens/Login';
@@ -15,7 +16,11 @@ export default function App() {
 			>
 				<Stack.Screen name='Login' component={Login} />
 				<Stack.Screen name='Signup' component={Signup} />
-				<Stack.Screen name='Private' component={ProtectedScreens} />
+				<Stack.Screen
+					name='Protected'
+					component={ProtectedScreens}
+					option={{ tabBarVisible: false }}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

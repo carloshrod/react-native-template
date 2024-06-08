@@ -1,20 +1,24 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
-import Home from '../screens/Home';
 import Events from '../screens/Events';
 import QR from '../screens/QR';
 import AccessControl from '../screens/AccessControl';
 import VisitorLogs from '../screens/VisitorLogs';
 import { CalendarIcon, HomeIcon, QRIcon } from '../utils/icons';
+import DrawerScreens from './DrawerScreens';
 
 const Tab = createBottomTabNavigator();
 
 const ProtectedScreens = () => {
 	return (
-		<Tab.Navigator initialRouteName='Home' screenOptions={screenOptions}>
+		<Tab.Navigator
+			initialRouteName='Drawer'
+			screenOptions={screenOptions}
+			backBehavior='history'
+		>
 			<Tab.Screen
 				name='Home'
-				component={Home}
+				component={DrawerScreens}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<Image style={{ tintColor: color }} source={HomeIcon} />

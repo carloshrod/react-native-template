@@ -3,24 +3,17 @@ import PrivateLayout from '../components/layout/PrivateLayout';
 import NavLink from '../components/ui/NavLink';
 import { NAVLINK_LABELS } from '../utils/arrays';
 
-const Home = ({ navigation, route: { name } }) => {
+const Home = () => {
 	const user = 'Leonardo';
 
 	return (
-		<PrivateLayout route={name}>
+		<PrivateLayout>
 			<Text style={styles.title}>Bienvenido {user}</Text>
 			<Text style={styles.subTitle}>¿En qué podemos ayudarte?</Text>
 			<FlatList
 				style={styles.navContainer}
 				data={NAVLINK_LABELS}
-				renderItem={({ item }) => (
-					<NavLink
-						label={item.label}
-						icon={item.icon}
-						navigateTo={item.navigateTo}
-						navigation={navigation}
-					/>
-				)}
+				renderItem={({ item }) => <NavLink {...item} />}
 				keyExtractor={item => item.label}
 				showsVerticalScrollIndicator={false}
 			/>

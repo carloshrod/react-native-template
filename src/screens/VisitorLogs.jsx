@@ -3,9 +3,9 @@ import PrivateLayout from '../components/layout/PrivateLayout';
 import Accordion from '../components/ui/Accordion';
 import { VISITOR_LOGS_ITEMS } from '../utils/arrays';
 
-const VisitorLogs = ({ navigation, route: { name } }) => {
+const VisitorLogs = () => {
 	return (
-		<PrivateLayout navigation={navigation} route={name}>
+		<PrivateLayout>
 			<FlatList
 				style={styles.container}
 				data={VISITOR_LOGS_ITEMS}

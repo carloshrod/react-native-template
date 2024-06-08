@@ -1,23 +1,42 @@
 import { useState } from 'react';
-import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, Alert } from 'react-native';
 import GoBack from '../ui/GoBack';
 import { bellIcon, menuIcon } from '../../utils/icons';
 import { navbarLogo } from '../../utils/images';
+import {
+	useNavigation,
+	DrawerActions,
+	useRoute,
+} from '@react-navigation/native';
 
-const Navbar = ({ navigation, route }) => {
-	const isHome = route?.toLowerCase() === 'home';
+const Navbar = () => {
+	const { name } = useRoute();
+	const navigation = useNavigation();
 	const [checked, setChecked] = useState(false);
+
+	const HIDDEN_NAVBAR = ['Eventos', 'QR'];
+	const isDrawer =
+		name?.toLowerCase() === 'drawer' || name?.toLowerCase() === 'documentos';
+	const isHiddenNavbar = HIDDEN_NAVBAR.includes(name);
+
 	const notificationsLength = 1;
 
-	return isHome || navigation ? (
+	const handleOpen = () => navigation.dispatch(DrawerActions.toggleDrawer());
+
+	return isDrawer || !isHiddenNavbar ? (
 		<View style={styles.navBar}>
-			{isHome ? (
+			{isDrawer ? (
 				<>
-					<Image source={menuIcon} />
+					<Pressable onPress={handleOpen}>
+						<Image source={menuIcon} />
+					</Pressable>
 					<Image source={navbarLogo} />
 					<Pressable
 						style={styles.notification}
-						onPress={() => setChecked(true)}
+						onPress={() => {
+							Alert.alert('Revisando notificaciones!');
+							setChecked(true);
+						}}
 					>
 						<Image source={bellIcon} />
 						{notificationsLength > 0 && !checked ? (
@@ -28,7 +47,7 @@ const Navbar = ({ navigation, route }) => {
 			) : (
 				<>
 					<GoBack top={16} left={24} />
-					<Text style={styles.routeName}>{route}</Text>
+					<Text style={styles.routeName}>{name}</Text>
 				</>
 			)}
 		</View>
