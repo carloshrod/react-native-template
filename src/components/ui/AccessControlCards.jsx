@@ -2,7 +2,6 @@ import {
 	View,
 	Text,
 	StyleSheet,
-	Dimensions,
 	FlatList,
 	Image,
 	Pressable,
@@ -10,16 +9,14 @@ import {
 import { ACCESS_CONTROL_ITEMS } from '../../utils/arrays';
 import { useNavigation } from '@react-navigation/native';
 
-const { width } = Dimensions.get('window');
-const columnCount = 2;
-const itemWidth = (width - 14) / columnCount - 32;
-
 const AccessControlCards = () => {
 	const navigation = useNavigation();
 
 	return (
 		<View style={styles.container}>
 			<FlatList
+				contentContainerStyle={styles.contentContainer}
+				columnWrapperStyle={styles.columnWrapper}
 				data={ACCESS_CONTROL_ITEMS}
 				renderItem={({ item }) => (
 					<Pressable
@@ -31,33 +28,39 @@ const AccessControlCards = () => {
 					</Pressable>
 				)}
 				keyExtractor={item => item.label}
-				numColumns={columnCount}
-				columnWrapperStyle={styles.row}
+				numColumns={numColumns}
 			/>
 		</View>
 	);
 };
 
+const numColumns = 2;
+
 const styles = StyleSheet.create({
 	container: {
+		maxWidth: 600,
 		flex: 1,
+		alignItems: 'center',
 		paddingBottom: 8,
 	},
-	row: {
-		flexDirection: 'row',
+	columnWrapper: {
 		justifyContent: 'space-between',
 	},
+	contentContainer: {
+		paddingHorizontal: 16,
+	},
 	gridItem: {
-		width: itemWidth,
+		width: '48%',
 		height: 108,
 		justifyContent: 'center',
 		alignItems: 'center',
-		margin: 8,
+		padding: 8,
+		marginVertical: 8,
 		backgroundColor: '#FFFFFF',
 		borderRadius: 8,
 	},
 	gridItemLabel: {
-		width: '60%',
+		width: '70%',
 		marginTop: 8,
 		textAlign: 'center',
 		fontFamily: 'DMSansBold',

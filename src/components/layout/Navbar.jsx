@@ -45,7 +45,11 @@ const Navbar = () => {
 					>
 						<Image source={BellIcon} />
 						{notificationsLength > 0 && !checked ? (
-							<Text style={styles.notificationDot}>{notificationsLength}</Text>
+							<View style={styles.notificationDot}>
+								<Text style={styles.notificationNumber}>
+									{notificationsLength}
+								</Text>
+							</View>
 						) : null}
 					</Pressable>
 				</>
@@ -84,11 +88,14 @@ const styles = StyleSheet.create({
 		bottom: -4,
 		height: 18,
 		width: 18,
-		textAlign: 'center',
-		lineHeight: 18,
 		backgroundColor: 'red',
+		borderRadius: 50,
+	},
+	notificationNumber: {
+		textAlign: 'center',
 		fontFamily: 'DMSansBold',
 		fontSize: 12,
+		lineHeight: 18,
 		color: '#FFFFFF',
 		borderRadius: 50,
 	},

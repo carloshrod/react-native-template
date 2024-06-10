@@ -19,6 +19,7 @@ const QR = () => {
 
 const styles = StyleSheet.create({
 	scrollContainer: {
+		maxWidth: 600,
 		gap: 16,
 		paddingVertical: 32,
 	},

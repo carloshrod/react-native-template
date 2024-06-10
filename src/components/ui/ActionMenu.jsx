@@ -22,7 +22,9 @@ const ActionMenu = ({ isOpen, onToggle }) => {
 						>
 							<Image style={styles.buttonIcon} source={icon} />
 						</Pressable>
-						<Text style={styles.buttonLabel}>{label}</Text>
+						<View style={styles.buttonLabel}>
+							<Text>{label}</Text>
+						</View>
 					</View>
 				))}
 			</View>

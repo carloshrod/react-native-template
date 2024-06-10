@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
 		maxHeight: 300,
 	},
 	scanText: {
-		fontFamily: 'InterXBold',
+		fontFamily: 'Inter',
+		fontWeight: '800',
 		fontSize: 25,
 	},
 	info: {

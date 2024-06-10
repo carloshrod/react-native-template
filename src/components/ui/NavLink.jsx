@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
 		gap: 12,
 	},
 	labelText: {
-		fontFamily: 'InterSBold',
+		fontFamily: 'Inter',
+		fontWeight: '600',
 		fontSize: 14,
 		color: '#25292E',
 	},

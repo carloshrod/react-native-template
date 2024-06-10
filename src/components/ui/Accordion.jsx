@@ -19,7 +19,9 @@ const Accordion = props => {
 					<Image style={styles.icon} source={pressableIcon} />
 					<Text style={styles.pressableLabel}>{props.label}</Text>
 				</View>
-				<Text style={styles.pressableLength}>{props?.logs?.length}</Text>
+				<View style={styles.logLength}>
+					<Text style={styles.logLengthLabel}>{props?.logs?.length}</Text>
+				</View>
 			</Pressable>
 			{isOpen ? <AccordionCard {...props} /> : null}
 		</View>
@@ -29,7 +31,6 @@ const Accordion = props => {
 const styles = StyleSheet.create({
 	accordion: {
 		width: '100%',
-		maxWidth: 400,
 		gap: 8,
 		marginBottom: 24,
 	},
@@ -53,15 +54,17 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 		color: '#FFCD06',
 	},
-	pressableLength: {
+	logLength: {
 		height: 20,
 		minWidth: 26,
-		textAlign: 'center',
 		paddingHorizontal: 2,
-		fontFamily: 'DMSansBold',
-		fontSize: 16,
 		backgroundColor: '#E4E8EB',
 		borderRadius: 6,
+	},
+	logLengthLabel: {
+		textAlign: 'center',
+		fontFamily: 'DMSansBold',
+		fontSize: 16,
 	},
 });
 

@@ -28,7 +28,7 @@ const VisitorLogs = () => {
 const styles = StyleSheet.create({
 	container: {
 		width: '100%',
-		maxWidth: 400,
+		maxWidth: 600,
 		paddingVertical: 16,
 	},
 });

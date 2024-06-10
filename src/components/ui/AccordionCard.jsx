@@ -28,7 +28,6 @@ const AccordionCard = ({ logs }) => {
 const styles = StyleSheet.create({
 	card: {
 		width: '100%',
-		maxWidth: 400,
 		padding: 16,
 		backgroundColor: '#000000',
 		borderRadius: 8,

@@ -61,7 +61,7 @@ const ProtectedScreens = () => {
 const screenOptions = {
 	headerShown: false,
 	tabBarStyle: {
-		height: 72,
+		paddingVertical: 10,
 		backgroundColor: '#000000',
 	},
 	tabBarInactiveTintColor: '#FFFFFF',
@@ -69,10 +69,6 @@ const screenOptions = {
 	tabBarLabelStyle: {
 		fontFamily: 'DMSansBold',
 		fontSize: 12,
-		paddingBottom: 10,
-	},
-	tabBarIconStyle: {
-		marginTop: 10,
 	},
 };
 
